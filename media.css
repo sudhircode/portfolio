@@ -1,0 +1,235 @@
+@media (min-width: 600px) and (max-width: 900px) {
+    header h1 {
+        font-size: 3.1em;
+    }
+
+    nav ul {
+        width: 75%;
+    }
+
+    nav ul li {
+        font-size: 1.15em;
+    }
+
+    #about-me-img1 {
+        width: 110%;
+    }
+
+    #about-me h1 {
+        font-size: 2.6em;
+    }
+
+    #about-me h3 {
+        font-size: 1.7em;
+    }
+
+    #amw h1 {
+        font-size: 2em;
+    }
+
+    #amw h2 {
+        font-size: 1.1em;
+    }
+
+    .projects div div h1 {
+        font-size: 2.5em;
+    }
+
+    .projects div div h2 {
+        font-size: 1.8em;
+    }
+
+    .projects div div button {
+        margin-left: 20%;
+        margin-top: 10%;
+        width: 65%;
+        border-radius: 15px;
+        padding: 5px 8px 8px 8px;
+        font-size: 1em;
+    }
+
+    .projects div {
+        margin: auto;
+    }
+
+    /* .my-skill button {
+        margin-top: auto;
+    }
+    #btn-show {
+        margin-bottom: auto;
+    } */
+}
+
+@media (min-width: 100px) and (max-width: 600px) {
+    header {
+        padding: 2vh 0vh 1vh 0vh;
+    }
+
+    header h1 {
+        width: 50%;
+        font-size: 2.5em;
+        font-weight: 300;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav {
+        width: 50%;
+    }
+
+    #menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    #about-me-img1 {
+        width: 120%;
+    }
+
+    #about-me h1 {
+        margin-top: 30px;
+        font-size: 2em;
+    }
+
+    #about-me h3 {
+        font-size: 1.6em;
+    }
+
+
+    #about-me button {
+        padding: 6px 12px 6px 12px;
+        font-size: 1.05em;
+    }
+
+    #about-my-work {
+        flex-direction: column-reverse;
+    }
+
+    #amw-img {
+        width: 90vw;
+        overflow-x: hidden;
+    }
+
+    #amw {
+        width: 90vw;
+    }
+
+    #amw h1 {
+        font-weight: 200;
+        font-size: 2.2em;
+    }
+
+    .my-skill {
+        column-gap: 50px;
+        row-gap: 50px;
+    }
+
+    #skill h1 {
+        font-size: 2.2em;
+        font-weight: 200;
+    }
+
+    .summary h1 {
+        font-size: 2em;
+    }
+
+    .summary p {
+        font-size: 1.1em;
+    }
+
+    .handles {
+        position: fixed;
+        top: 80px;
+        right: 10px;
+    }
+
+    .handles span {
+        position: fixed;
+        top: 45px;
+        right: 30px;
+    }
+
+    .handles div img {
+        margin-left: 13px;
+    }
+
+    /* .my-skill button {
+        margin-top: auto;
+    }
+
+    #btn-show {
+        margin-top: 0px;
+    } */
+
+    .my-projects h1 {
+        font-size: 2.2em;
+    }
+
+    .projects div {
+        scale: 1;
+    }
+
+    .projects div:hover {
+        scale: 1.03;
+    }
+
+    .projects div div h1 {
+        font-size: 2em;
+    }
+
+    .projects div div h2 {
+        font-size: 1.5em;
+    }
+
+    .projects div div button {
+        margin-left: 20%;
+        margin-top: 15%;
+        width: 65%;
+        border-radius: 15px;
+        padding: 5px 8px 5px 8px;
+        font-size: .8em;
+    }
+
+    .projects div {
+        width: 85vw;
+        height: 250px;
+        min-width: 300px;
+    }
+
+    .projects div div {
+        width: 85vw;
+        height: 250px;
+        min-width: 300px;
+    }
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    footer h1 {
+        text-align: center;
+    }
+
+    .left-footer {
+        margin: auto;
+        margin-top: 30px;
+        width: 80vw;
+        margin-left: 5%;
+        padding: 2%;
+    }
+
+    .right-footer {
+        margin-top: 20px;
+    }
+
+    .left-footer div h2 {
+        line-height: .7cm;
+        padding: 20px 5px 5px 5px;
+        font-weight: 300;
+    }
+}
