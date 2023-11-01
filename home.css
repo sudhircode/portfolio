@@ -19,19 +19,20 @@ body {
 main {
     width: 100vw;
     height: auto;
-    background-color: rgb(1, 6, 18);
+    background-color: #010612;
     opacity: 90%;
     font-family: Montserrat, Montserrat, sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
+    transition: .3s;
 }
 
 .bg-color-main {
     background-color: rgb(245, 245, 245) !important;
     opacity: 1;
     color: black !important;
-    transition: .4s;
+    transition: .3s;
 }
 
 /* ----------------header------------- */
@@ -48,6 +49,7 @@ header {
     z-index: 1;
     opacity: 1;
     background-color: rgb(1, 6, 18);
+    transition: .3s;
 }
 
 a {
@@ -78,7 +80,7 @@ nav {
 }
 
 header h1::first-letter {
-    color: cornflowerblue;
+    color: #6495ed;
 }
 
 nav ul {
@@ -139,6 +141,7 @@ article {
     flex-direction: row;
     color: white;
     background-color: rgb(1, 6, 18);
+    transition: .3s;
 }
 
 #about-me {
@@ -243,6 +246,8 @@ article {
 
 /* ---------------summary----------- */
 .summary {
+    background-color: rgb(1, 6, 18);
+    transition: .3s;
     margin: auto;
     width: 90vw;
 }
@@ -254,6 +259,7 @@ article {
     margin-top: 30px;
     font-size: 2.5em;
     font-weight: 300;
+
 }
 
 .summary p {
@@ -261,6 +267,7 @@ article {
     line-height: .8cm;
     font-size: 1.2em;
     font-weight: 200;
+
 }
 
 /* ----------------about-my-work-------------- */
@@ -270,6 +277,8 @@ article {
     flex-wrap: wrap;
     width: 90vw;
     margin: auto;
+    background-color: rgb(1, 6, 18);
+    transition: .3s;
 }
 
 #amw-img {
@@ -329,6 +338,8 @@ article {
     width: 90vw;
     margin: auto;
     height: auto;
+    background-color: rgb(1, 6, 18);
+    transition: .3s;
 }
 
 #skill h1 {
@@ -422,6 +433,8 @@ article {
     width: 90vw;
     margin: auto;
     height: auto;
+    background-color: rgb(1, 6, 18);
+    transition: .3s;
 }
 
 .my-projects h1 {
@@ -447,7 +460,7 @@ article {
 
 
 .projects div {
-    background-image: url(WhatsApp-img.jpeg);
+    background-image: url(image/WhatsApp-img.jpeg);
     border-radius: 20px;
     width: 45%;
     height: 270px;
@@ -553,16 +566,25 @@ article {
 }
 
 #click {
+    display: none;
     position: fixed;
     top: 85vh;
+    transition: .5s;
+    rotate:268deg;
 }
-
+#click:hover{
+    transform: translateX(10px);
+    transition: .5s;
+    scale: 1.2;
+}
 /* -------------footer--------- */
 
 footer {
     width: 90vw;
     margin: auto;
     height: auto;
+    background-color: rgb(1, 6, 18);
+    transition: .3s;
 }
 
 footer h1 {

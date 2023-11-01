@@ -46,7 +46,7 @@ function f5() {
             i++;
             setTimeout(removeClass, 500);
         }
-        else{
+        else {
             document.getElementById('btn-hide').style.display = "block";
         }
     }
@@ -63,8 +63,8 @@ function f6() {
             i++;
             setTimeout(removeClass, 500);
         }
-        else{
-            document.getElementById('btn-show').style.display = "block";f
+        else {
+            document.getElementById('btn-show').style.display = "block"; f
         }
     }
     removeClass();
@@ -83,5 +83,6 @@ function mouseOut() {
     document.getElementById('small').classList.remove('move');
 }
 // ----------------projects animation---------
-
-
+function f8() {
+    window.scrollTo({ top: 0 });
+} 
