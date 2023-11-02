@@ -86,3 +86,11 @@ function mouseOut() {
 function f8() {
     window.scrollTo({ top: 0 });
 } 
+function showAlertOnScroll() {
+    if (window.scrollY >= 400) {
+        document.getElementById('click').style.display="block";
+    }
+    else{
+        document.getElementById('click').style.display="none";
+    }
+}
