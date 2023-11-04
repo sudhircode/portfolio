@@ -23,6 +23,10 @@
         font-size: 1.7em;
     }
 
+    #span-btn {
+        column-gap: 30px;
+    }
+
     #amw h1 {
         font-size: 2em;
     }
@@ -51,13 +55,6 @@
     .projects div {
         margin: auto;
     }
-
-    /* .my-skill button {
-        margin-top: auto;
-    }
-    #btn-show {
-        margin-bottom: auto;
-    } */
 }
 
 @media (min-width: 100px) and (max-width: 600px) {
@@ -103,6 +100,10 @@
         font-size: 1.05em;
     }
 
+    #span-btn {
+        flex-direction: column;
+    }
+
     #about-my-work {
         flex-direction: column-reverse;
     }
@@ -145,6 +146,10 @@
         right: 10px;
     }
 
+    #menu-nav {
+        display: block;
+    }
+
     .handles span {
         position: fixed;
         top: 45px;
@@ -154,14 +159,6 @@
     .handles div img {
         margin-left: 13px;
     }
-
-    /* .my-skill button {
-        margin-top: auto;
-    }
-
-    #btn-show {
-        margin-top: 0px;
-    } */
 
     .my-projects h1 {
         font-size: 2.2em;

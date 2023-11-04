@@ -192,6 +192,14 @@ article {
     transform: translateX(10px);
 }
 
+#span-btn {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+}
+#btn-new:hover{
+    color: black !important;
+}
 #about-me button:hover #btn-con {
     color: black !important;
 }
@@ -223,6 +231,7 @@ article {
     background-color: rgb(100, 149, 237, .8);
     transition: .3s;
     z-index: 1;
+    display: none;
 }
 
 .menu-nav-transfrom {
@@ -391,6 +400,7 @@ article {
 .my-skill div:hover {
     transition: .3s;
     scale: 1.15;
+    background: linear-gradient(209deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
 
 .my-skill div img {
@@ -559,10 +569,15 @@ article {
     height: 30px;
     cursor: pointer;
     z-index: 2;
+    background-color: white;
+    border-radius: 50%;
+
 }
 
 .handles div img:hover {
     scale: 1.1;
+    box-shadow: 0px 4px 20px rgb(100, 149, 237, .5);
+
 }
 
 #click {
@@ -570,13 +585,18 @@ article {
     position: fixed;
     top: 85vh;
     transition: .5s;
-    rotate:268deg;
+    rotate: 268deg;
 }
-#click:hover{
+.click{
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+#click:hover {
     transform: translateX(10px);
     transition: .5s;
     scale: 1.2;
 }
+
 /* -------------footer--------- */
 
 footer {
