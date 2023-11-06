@@ -72,6 +72,7 @@ function f6() {
 
 // ---------body-onload------------
 function load1() {
+    document.getElementById('article').style.transform = 'translateY(0px)';
     document.getElementById('head').classList.add('header-anm');
     document.getElementById('about-me').style.scale = "1";
     document.getElementById('about-me-img1').style.scale = "1";
@@ -85,12 +86,29 @@ function mouseOut() {
 // ----------------projects animation---------
 function f8() {
     window.scrollTo({ top: 0 });
-} 
+}
 function showAlertOnScroll() {
     if (window.scrollY >= 400) {
-        document.getElementById('click').style.display="block";
+        document.getElementById('click').style.display = "block";
     }
-    else{
-        document.getElementById('click').style.display="none";
+    else {
+        document.getElementById('click').style.display = "none";
+    }
+    const div2 = document.querySelector('.scroll-anim');
+
+    if (isElementInViewport(div2)) {
+        div2.classList.add('visible');
+    } else {
+        div2.classList.remove('visible');
     }
 }
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    return (rect.top >= 0 && rect.bottom <= windowHeight);
+}
+
+// document.addEventListener('scroll', function () {
+//     alert("hello");
+    
+// });
