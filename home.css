@@ -8,6 +8,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
+    overflow-x: hidden;
 }
 
 /* -----------------main--------------- */
@@ -26,6 +27,8 @@ main {
     display: flex;
     flex-direction: column;
     transition: .3s;
+    overflow: hidden;
+
 }
 
 .bg-color-main {
@@ -233,6 +236,7 @@ article {
     transition: .3s;
     z-index: 1;
     display: none;
+    overflow: hidden;
 }
 
 .menu-nav-transfrom {
