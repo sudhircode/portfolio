@@ -136,7 +136,7 @@ nav ul li {
 
 /* ------------------about-my-work-------------- */
 article {
-    background-image: url("/image/my-hd-image.jpg");
+    background-image: url("/my-hd-image.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% auto;
