@@ -22,7 +22,8 @@ main {
     height: auto;
     background-color: #010612;
     opacity: 90%;
-    font-family: Montserrat, Montserrat, sans-serif;
+    /* font-family: 'DM Sans', sans-serif; */
+    font-family: 'Poppins', sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
@@ -97,7 +98,7 @@ nav ul {
 nav ul li {
     list-style-position: inside;
     list-style: none;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 #menu {
@@ -135,45 +136,43 @@ nav ul li {
 
 /* ------------------about-my-work-------------- */
 article {
-    margin: auto;
-    margin-top: 4em;
-    width: 90vw;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    color: white;
-    background-color: rgb(1, 6, 18);
-    transform: translateY(20px);
-    transition: .3s;
-}
-
-#about-me {
-    align-items: center;
-    font-style: italic;
-    width: 45vw;
-    height: auto;
-    scale: .7;
-    transition: .5s;
+    background-image: url("/image/my-hd-image.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-top: 6em;
+    width: 100%;
+    height: 410px;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-
+    border-image: fill 0 linear-gradient(#0003,#000000ec);
+    transition: .3s ease-in-out;
 }
 
-#about-me h1 {
-    font-size: 3em;
-    font-weight: 300;
+#article h1 {
+    margin-left: 5%;
+    font-size: 3.2em;
+    font-family: 'DM Sans', sans-serif;
+    opacity: 85%;
 }
 
-#about-me h3 {
+#article h1 span {
+    background: linear-gradient(180deg, rgba(246, 244, 244, 1) 2%, rgba(100, 39, 237, 1) 48%, rgba(192, 24, 230, 1) 83%);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+}
+
+#article h3 {
+    margin-left: 5%;
     margin-top: 20px;
-    font-size: 2em;
-    font-weight: 300;
+    font-size: 2.5em;
+    font-weight: 500;
 }
 
-#about-me button {
+#article button {
     border: none;
     border-radius: 10px;
     background-color: cornflowerblue;
@@ -183,11 +182,12 @@ article {
     transition: .3s;
     cursor: pointer;
     margin-top: 30px;
+    margin-left: 5%;
     font-weight: 500;
     transition: .3s;
 }
 
-#about-me button:hover {
+#article button:hover {
     transition: .3s;
     transition: .3s;
     scale: 1.15;
@@ -201,29 +201,15 @@ article {
     flex-direction: row;
     column-gap: 50px;
 }
-#btn-new:hover{
+
+#btn-new:hover {
     color: black !important;
 }
-#about-me button:hover #btn-con {
+
+#article button:hover #btn-con {
     color: black !important;
 }
 
-#about-me h1 span {
-    color: cornflowerblue;
-}
-
-#about-me-img {
-    display: flex;
-    justify-content: center;
-    width: 45vw;
-}
-
-#about-me-img1 {
-    width: 80%;
-    height: auto;
-    object-fit: contain;
-    transition: .5s;
-}
 
 #menu-nav {
     position: fixed;
@@ -231,10 +217,10 @@ article {
     right: -60vw;
     border-radius: 10px;
     width: 130px;
-    height: 200px;
+    height: 220px;
     background-color: rgb(100, 149, 237, .8);
     transition: .3s;
-    z-index: 1;
+    z-index: 3;
     display: none;
     overflow: hidden;
 }
@@ -256,6 +242,11 @@ article {
     list-style: none;
     font-size: 1.1em;
     font-weight: bold;
+}
+
+#menu-nav ul li:hover {
+    scale: 1.05;
+    text-decoration: underline;
 }
 
 /* ---------------summary----------- */
@@ -281,8 +272,6 @@ article {
     line-height: .8cm;
     font-size: 1.2em;
     font-weight: 200;
-    opacity: 0;
-    transform: translateY(20px);
 
 }
 
@@ -384,8 +373,6 @@ article {
     display: block;
     box-shadow: 2px 2px 3px 3px cornflowerblue;
     color: white !important;
-    height: auto;
-    min-height: 200px;
     border-radius: 10px;
     text-align: center;
     padding: 5px;
@@ -406,8 +393,8 @@ article {
 
 .my-skill div:hover {
     transition: .3s;
-    scale: 1.15;
-    background: linear-gradient(209deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    scale: 1.10;
+    background: linear-gradient(209deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
 
 .my-skill div img {
@@ -509,7 +496,8 @@ article {
 }
 
 .projects div:hover {
-    scale: 1;
+    scale: 1.05;
+    transition: .3s ease-in-out;
 }
 
 .projects div div h1 {
@@ -594,10 +582,12 @@ article {
     transition: .5s;
     rotate: 268deg;
 }
-.click{
+
+.click {
     background-color: transparent !important;
     box-shadow: none !important;
 }
+
 #click:hover {
     transform: translateX(10px);
     transition: .5s;
@@ -699,7 +689,13 @@ footer h1 {
     padding-bottom: 10px;
     font-size: .8em;
 }
+
 /* ----------------extra classes for js---------- */
+.scroll-anim-css {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
 .visible {
     transition: 1s;
     opacity: 1 !important;

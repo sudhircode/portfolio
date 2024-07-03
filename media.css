@@ -11,15 +11,11 @@
         font-size: 1.15em;
     }
 
-    #about-me-img1 {
-        width: 110%;
-    }
-
-    #about-me h1 {
+    #article h1 {
         font-size: 2.6em;
     }
 
-    #about-me h3 {
+    #article h3 {
         font-size: 1.7em;
     }
 
@@ -80,28 +76,28 @@
         display: block;
         cursor: pointer;
     }
-
-    #about-me-img1 {
-        width: 120%;
+    article{
+        height: 270px;
     }
 
-    #about-me h1 {
+    #article h1 {
         margin-top: 30px;
         font-size: 2em;
     }
 
-    #about-me h3 {
+    #article h3 {
         font-size: 1.6em;
+        color: white;
     }
 
 
-    #about-me button {
+    #article button {
         padding: 6px 12px 6px 12px;
         font-size: 1.05em;
     }
 
     #span-btn {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     #about-my-work {
@@ -121,9 +117,9 @@
         font-weight: 200;
         font-size: 2.2em;
     }
-
+    
     .my-skill {
-        column-gap: 50px;
+        column-gap: 30px;
         row-gap: 50px;
     }
 
@@ -163,6 +159,7 @@
     .my-projects h1 {
         font-size: 2.2em;
     }
+    
 
     .projects div {
         scale: 1;
@@ -190,6 +187,7 @@
     }
 
     .projects div {
+        margin: auto;
         width: 85vw;
         height: 250px;
         min-width: 300px;

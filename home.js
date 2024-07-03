@@ -3,13 +3,16 @@ document.getElementById('slide').addEventListener("click", f1)
 function f1() {
     document.getElementById('slider').classList.toggle('slider');
     document.getElementById('head').classList.toggle('bg-color-main');
+    let imgColor = document.querySelector('article');
     const anchorTags = document.getElementsByTagName("a");
     for (let i = 0; i < anchorTags.length; i++) {
         if (anchorTags[i].style.color === "black") {
             anchorTags[i].style.color = "white";
+            imgColor.style.borderImage = 'fill 0 linear-gradient(#0003,#000000ec)';
         } else {
             anchorTags[i].style.color = "black";
             anchorTags[i].style.opacity = 1;
+            imgColor.style.borderImage = 'fill 0 linear-gradient(rgba(244, 232, 232, 0.2),#f1f0f0b6)';
         }
     }
     document.getElementById('skill').classList.toggle('bg-color-main');
@@ -20,6 +23,7 @@ function f1() {
     document.getElementById('my-projects').classList.toggle('bg-color-main');
     document.getElementById('footer1').classList.toggle('bg-color-main');
     document.getElementById('slider').classList.toggle('slide-black');
+    document.getElementById('btn-new').style.color="black";
 
 }
 // ----------for menu-nav----------
@@ -94,12 +98,15 @@ function showAlertOnScroll() {
     else {
         document.getElementById('click').style.display = "none";
     }
-    const div2 = document.querySelector('.scroll-anim');
+    const div2 = document.querySelectorAll('.scroll-anim-js');
 
-    if (isElementInViewport(div2)) {
-        div2.classList.add('visible');
-    } else {
-        div2.classList.remove('visible');
+    for (let i = 0; i <= div2.length; i++) {
+        if (isElementInViewport(div2[i])) {
+            // class="scroll-anim-js scroll-anim-css"
+            div2[i].classList.add('visible');
+        } else {
+            div2[i].classList.remove('visible');
+        }
     }
 }
 function isElementInViewport(el) {
@@ -107,8 +114,3 @@ function isElementInViewport(el) {
     const windowHeight = window.innerHeight;
     return (rect.top >= 0 && rect.bottom <= windowHeight);
 }
-
-// document.addEventListener('scroll', function () {
-//     alert("hello");
-    
-// });
