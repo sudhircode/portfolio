@@ -63,7 +63,7 @@ a {
 }
 
 .header-anm {
-    transition: .3s;
+    transition: .2s;
     position: fixed;
     top: 0vh;
 }
@@ -469,7 +469,8 @@ article {
     width: 45%;
     height: 270px;
     min-width: 300px;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     cursor: pointer;
     scale: .98;
     overflow: hidden;
@@ -636,6 +637,7 @@ footer h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .right-footer img {
