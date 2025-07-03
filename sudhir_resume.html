@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudhir Kumar - Resume</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f7fafc;
+        }
+        
+        .resume-container {
+            max-width: 8.5in;
+            min-height: 11in;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 50px;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transform: translate(50px, -50px);
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .contact-item i {
+            width: 16px;
+            text-align: center;
+            opacity: 0.8;
+        }
+        
+        .main-content {
+            padding: 40px 50px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #667eea;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #764ba2;
+        }
+        
+        .summary {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #4a5568;
+            text-align: justify;
+        }
+        
+        .education-item, .experience-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .education-item::before, .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #667eea;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #2d3748;
+        }
+        
+        .item-date {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+        
+        .item-subtitle {
+            font-size: 0.95rem;
+            color: #718096;
+            margin-bottom: 10px;
+        }
+        
+        .item-description {
+            font-size: 0.9rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        .item-description ul {
+            padding-left: 20px;
+        }
+        
+        .item-description li {
+            margin-bottom: 5px;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .project-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .project-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        
+        .project-description {
+            font-size: 0.9rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-category {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+            border-top: 4px solid #667eea;
+        }
+        
+        .skill-category-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: white;
+            color: #4a5568;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+        
+        .skill-tag:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-1px);
+        }
+        
+        .download-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+        
+        .download-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+                max-width: none;
+            }
+            
+            .download-btn {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .resume-container {
+                margin: 10px;
+            }
+            
+            .header, .main-content {
+                padding: 30px 30px;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1 class="name">SUDHIR KUMAR</h1>
+            <div class="title">Full-Stack Developer & Creative Professional</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>mauryasudhir635@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 7065828141</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Gurugram, Haryana</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>linkedin.com/in/kumarsudhir2023</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/sudhircode</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
+                <div class="summary">
+                    Versatile Web Developer and Creative Professional with expertise in creating clean, responsive, and user-friendly interfaces. Experienced in full-stack development with strong skills in React.js, Java, and modern web technologies. Passionate about Content Creation, specializing in Video Production and Graphic Design to bring digital ideas to life. Proven track record of helping startups grow through technical excellence and creative solutions, with a keen understanding of client needs and market trends.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">Master of Computer Application</div>
+                        <div class="item-date">Aug 2024 - Aug 2026</div>
+                    </div>
+                    <div class="item-subtitle">Gurugram University (Main Campus), Gurgaon</div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Specializing in software development, AI, and cloud computing</li>
+                            <li>Advanced coursework in web design, mobile app development, and databases (MongoDB, MySQL)</li>
+                            <li>Strong foundation in Java, Python, React, REST APIs, DBMS, and computing security</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">Java Full-Stack Development Course</div>
+                        <div class="item-date">Nov 2022 - Jan 2024</div>
+                    </div>
+                    <div class="item-subtitle">Ducat Institute, Gurgaon, Sec-14</div>
+                    <div class="item-description">
+                        Specialized in advanced frontend design with React.js and Java backend development with MySQL database integration.
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">Bachelor of Computer Application</div>
+                        <div class="item-date">Aug 2020 - Jun 2023</div>
+                    </div>
+                    <div class="item-subtitle">B.M. College of Tech. & Mgmt., Farukhnagar, Gurgaon</div>
+                    <div class="item-description">
+                        Relevant coursework in Structural Design and Computer Management with hands-on experience in Computer Systems and Technologies.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Frontend Developer & Creative Professional</div>
+                        <div class="item-date">Sept 2024 - April 2025</div>
+                    </div>
+                    <div class="item-subtitle">Nurture Webtech (Start-up), Gurgaon</div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Joined as a frontend developer and expanded role to include content creation and graphic design as the company grew</li>
+                            <li>Actively participated in client pitching and business development, contributing to significant client acquisition</li>
+                            <li>Managed end-to-end frontend development, created engaging social media videos, and handled diverse design projects</li>
+                            <li>Helped the company secure multiple new clients within the first 2 months through dedicated work and innovative solutions</li>
+                            <li>Worked independently with creative freedom, delivering high-quality results across multiple project domains</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-code"></i> Key Projects</h2>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-title">Stonepedia Website</div>
+                        <div class="project-description">
+                            Contributed to frontend design focusing on hero section and homepage using WordPress and custom HTML/CSS. Enhanced user interface design to improve first impressions and user engagement.
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">The Scan Centre</div>
+                        <div class="project-description">
+                            Designed frontend interface for a diagnostic centre website. Researched healthcare platforms and created a minimalist, clean layout to improve user experience and booking clarity.
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">Anjali Makeover Mantras</div>
+                        <div class="project-description">
+                            Built a themed bridal makeup studio website with strategic red color scheme. Applied design psychology to encourage package bookings over individual services, boosting client inquiries.
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">College Management System</div>
+                        <div class="project-description">
+                            Developed a responsive college website with Admin & Student portals. Built with HTML/CSS, upgraded to React.js, and implemented backend using JSP & Servlets with MySQL database (CRUD operations).
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">Personal Portfolio</div>
+                        <div class="project-description">
+                            Created a responsive portfolio website using React.js featuring dark/light mode, sticky stackable cards, and smooth navigation. Showcases web design skills and personal branding.
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">Tic Tac Toe Game</div>
+                        <div class="project-description">
+                            Built an interactive two-player desktop game using Java and Swing. Demonstrates logic-building skills, GUI development, and ability to create engaging standalone applications.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-tools"></i> Technical & Creative Skills</h2>
+                
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <div class="skill-category-title">
+                            <i class="fas fa-code"></i>
+                            Web Development
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C/C++</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">DBMS</span>
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">OOP Concepts</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-category-title">
+                            <i class="fas fa-video"></i>
+                            Video Production
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-tag">Adobe Premiere Pro</span>
+                            <span class="skill-tag">DaVinci Resolve</span>
+                            <span class="skill-tag">Final Cut Pro</span>
+                            <span class="skill-tag">Adobe After Effects</span>
+                            <span class="skill-tag">CapCut Pro</span>
+                            <span class="skill-tag">Adobe Podcast</span>
+                            <span class="skill-tag">Video Shooting</span>
+                            <span class="skill-tag">Content Creation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-category-title">
+                            <i class="fas fa-palette"></i>
+                            Graphic Design
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-tag">Canva</span>
+                            <span class="skill-tag">Logo Design</span>
+                            <span class="skill-tag">Brand Identity</span>
+                            <span class="skill-tag">Instagram Posts</span>
+                            <span class="skill-tag">Product Labels</span>
+                            <span class="skill-tag">Social Media Graphics</span>
+                            <span class="skill-tag">Color Theory</span>
+                            <span class="skill-tag">Typography</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="download-btn" onclick="downloadPDF()">
+        <i class="fas fa-download"></i> Download PDF
+    </button>
+
+    <script>
+        function downloadPDF() {
+            // Hide the download button temporarily
+            const downloadBtn = document.querySelector('.download-btn');
+            downloadBtn.style.display = 'none';
+            
+            // Use the browser's print functionality
+            window.print();
+            
+            // Show the button again after a short delay
+            setTimeout(() => {
+                downloadBtn.style.display = 'block';
+            }, 1000);
+        }
+        
+        // Add smooth scrolling for better user experience
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation delays to project cards
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Add hover effects to skill tags
+            const skillTags = document.querySelectorAll('.skill-tag');
+            skillTags.forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px) scale(1.05)';
+                });
+                
+                tag.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
